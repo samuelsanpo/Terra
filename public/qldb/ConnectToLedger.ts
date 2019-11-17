@@ -20,7 +20,7 @@ import { PooledQldbDriver, QldbDriver, QldbSession } from "amazon-qldb-driver-no
 import { ClientConfiguration } from "aws-sdk/clients/qldbsession";
 
 import { LEDGER_NAME } from "./Constants";
-//import { error, log } from "./qldb/LogUtil";
+
 
 const pooledQldbDriver: QldbDriver = createQldbDriver();
 
@@ -66,13 +66,13 @@ var main = async function(): Promise<void> {
     let session: QldbSession = null;
     try {
         session = await createQldbSession();
-        log("Listing table names...");
+        console.log("Listing table names...");
         const tableNames: string[] = await session.getTableNames();
         tableNames.forEach((tableName: string): void => {
-            log(tableName);
+            console.log(tableName);
         });
     } catch (e) {
-        error(`Unable to create session: ${e}`);
+        console.error(`Unable to create session: ${e}`);
     } finally {
         closeQldbSession(session);
     }
