@@ -18,7 +18,7 @@
 
 import { PooledQldbDriver, QldbDriver, QldbSession } from "amazon-qldb-driver-nodejs";
 import { ClientConfiguration } from "aws-sdk/clients/qldbsession";
-
+//cambio
 process.env.AWS_REGION = "us-east-2"
 
 
