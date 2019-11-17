@@ -19,8 +19,11 @@
 import { PooledQldbDriver, QldbDriver, QldbSession } from "amazon-qldb-driver-nodejs";
 import { ClientConfiguration } from "aws-sdk/clients/qldbsession";
 
-import { LEDGER_NAME } from "./Constants";
+process.env.AWS_REGION = "us-east-2"
 
+
+import { LEDGER_NAME } from "./Constants";
+//import { error, log } from "./qldb/LogUtil";
 
 const pooledQldbDriver: QldbDriver = createQldbDriver();
 

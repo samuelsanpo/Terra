@@ -20,6 +20,6 @@ exports.__esModule = true;
 /**
  * Constant values used throughout this tutorial.
  */
-exports.LEDGER_NAME = "Terra";
+exports.LEDGER_NAME = "TerraLedger";
 exports.LEDGER_NAME_WITH_TAGS = "tags";
 exports.RETRY_LIMIT = 4;
